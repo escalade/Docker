@@ -9,4 +9,4 @@ RUN mkdir -p /root/.config
 COPY *.xz /tmp/
 
 # Install packages
-RUN pacman -U /tmp/*.xz
+RUN pacman -U --noconfirm /tmp/*.xz
