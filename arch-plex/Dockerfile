@@ -6,7 +6,7 @@ MAINTAINER escalade
 RUN mkdir -p /root/.config
 
 # Copy packages to container
-ADD *.xz /tmp/
+COPY *.xz /tmp/
 
 # Install packages
 RUN pacman -U /tmp/*.xz
