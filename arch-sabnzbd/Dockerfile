@@ -6,7 +6,8 @@ MAINTAINER escalade
 RUN mkdir -p /root/.config
 
 # Copy packages to container
-ADD *.xz /tmp/
+COPY *.xz /tmp/
 
 # Install packages
-RUN pacman -U /tmp/*.xz
+RUN pacman -U --noconfirm /tmp/*.xz
+RUN pacman -S --noconfirm python2-feedparser python2-pyopenssl
