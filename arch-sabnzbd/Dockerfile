@@ -11,3 +11,6 @@ COPY *.xz /tmp/
 # Install packages
 RUN pacman -U --noconfirm /tmp/*.xz
 RUN pacman -S --noconfirm python2-feedparser python2-pyopenssl
+
+# Remove downloaded packages
+RUN yes | pacman -Scc
