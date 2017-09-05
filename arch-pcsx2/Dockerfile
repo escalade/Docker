@@ -3,7 +3,7 @@ FROM escalade1/arch:latest
 MAINTAINER escalade
 
 # Install pcsx2
-RUN pacman -Sy --noconfirm pcsx2-git ttf-dejavu
+RUN yes | pacman -Sy pcsx2-git lib32-libglvnd ttf-dejavu
 
 # Remove downloaded packages
 RUN yes | pacman -Scc
