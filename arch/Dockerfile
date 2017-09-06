@@ -24,7 +24,10 @@ RUN echo -e "LANG=en_US.UTF-8" > /etc/locale.conf
 RUN locale-gen
 
 # Update system and install apps
-RUN pacman -Sy --noconfirm archlinux-keyring && pacman -Su --noconfirm && pacman-db-upgrade && update-ca-trust && pacman -S --noconfirm archlinuxcn-keyring
+RUN pacman -Sy --noconfirm archlinux-keyring && pacman -Su --noconfirm && pacman-db-upgrade && update-ca-trust && pacman -S --noconfirm archlinuxcn-keyring vim
+
+# Set VIM as default editor
+RUN echo VISUAL=vim >> /etc/profile
 
 # Remove downloaded packages
 RUN yes | pacman -Scc
