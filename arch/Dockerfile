@@ -27,7 +27,8 @@ RUN locale-gen
 RUN pacman -Sy --noconfirm archlinux-keyring && pacman -Su --noconfirm && pacman-db-upgrade && update-ca-trust && pacman -S --noconfirm archlinuxcn-keyring vim
 
 # Set VIM as default editor
-RUN echo VISUAL=vim >> /etc/profile
+RUN echo >> /etc/bash.bashrc
+RUN echo VISUAL=vim >> /etc/bash.bashrc
 
 # Remove downloaded packages
 RUN yes | pacman -Scc
