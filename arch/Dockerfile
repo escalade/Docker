@@ -28,7 +28,7 @@ RUN pacman -Sy --noconfirm archlinux-keyring && pacman -Su --noconfirm && pacman
 
 # Set VIM as default editor
 RUN echo >> /etc/bash.bashrc
-RUN echo VISUAL=vim >> /etc/bash.bashrc
+RUN echo export VISUAL=vim >> /etc/bash.bashrc
 
 # Remove downloaded packages
 RUN yes | pacman -Scc
