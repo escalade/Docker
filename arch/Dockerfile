@@ -23,6 +23,9 @@ RUN sed -i -e "s/#en_US\.UTF-8/en_US\.UTF-8/" /etc/locale.gen
 RUN echo -e "LANG=en_US.UTF-8" > /etc/locale.conf
 RUN locale-gen
 
+# Initialize local keyring
+RUN pacman-key --init && pacman-key --populate archlinux
+
 # Update system and install apps
 RUN pacman -Sy --noconfirm gettext vim archlinuxcn-keyring && pacman -Su --noconfirm && pacman-db-upgrade && update-ca-trust
 
