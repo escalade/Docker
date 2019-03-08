@@ -31,7 +31,7 @@ RUN echo >> /etc/bash.bashrc
 RUN echo export VISUAL=vim >> /etc/bash.bashrc
 
 # Remove downloaded packages
-RUN yes | pacman -Scc
+RUN /usr/sbin/yes | pacman -Scc
 
 # Set default command
 CMD ["bash","-l"]
