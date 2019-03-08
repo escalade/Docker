@@ -9,4 +9,4 @@ RUN pacman -Sy --noconfirm base-devel wget bc gperf zip xorg-mkfontscale xorg-mk
 RUN ln -s /usr/lib/go /usr/lib/golang
 
 # Remove downloaded packages
-RUN yes | pacman -Scc
+RUN pacman -Scc --noconfirm
