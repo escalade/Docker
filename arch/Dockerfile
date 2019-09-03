@@ -16,9 +16,11 @@ Server = https://cdn.repo.archlinuxcn.org/\$arch \n\
 RUN echo -e " \n\
 [multilib] \n\
 Include = /etc/pacman.d/mirrorlist \n\
-\n\
+" >> /etc/pacman.conf
+
+RUN echo -e " \n\
 [mesa-git] \n\
-Server = https://pkgbuild.com/~lcarlier/$repo/$arch \n\
+Server = https://pkgbuild.com/~lcarlier/\$repo/\$arch \n\
 SigLevel = Optional \n\
 " >> /etc/pacman.conf
 
