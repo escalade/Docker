@@ -38,6 +38,7 @@ RUN pacman -Sy --noconfirm gettext vim archlinuxcn-keyring && pacman -Su --nocon
 # Set VIM as default editor
 RUN echo >> /etc/bash.bashrc
 RUN echo export VISUAL=vim >> /etc/bash.bashrc
+RUN echo export PS1='"\[\e[1;33m\]\h\[\e[1;34m\]:\[\e[1;34m\]\w \[\e[0m\]\\$ "' >> /etc/bash.bashrc
 
 # Remove downloaded packages
 RUN pacman -Scc --noconfirm
