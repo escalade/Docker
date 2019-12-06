@@ -13,3 +13,5 @@ RUN pacman -Sy --noconfirm libexif google-chrome ttf-tlwg ttf-linux-libertine
 
 # Remove downloaded packages
 RUN yes | pacman -Scc
+
+RUN rm -rf /usr/share/*doc /usr/share/man /usr/share/info

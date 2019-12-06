@@ -10,3 +10,5 @@ COPY *.xz /tmp/
 
 # Install packages
 RUN pacman -U --noconfirm /tmp/*.xz
+
+RUN rm -rf /usr/share/*doc /usr/share/man /usr/share/info

@@ -43,5 +43,7 @@ RUN echo export PS1='"\[\e[1;33m\]\h\[\e[1;34m\]:\[\e[1;34m\]\w \[\e[0m\]\\$ "' 
 # Remove downloaded packages
 RUN pacman -Scc --noconfirm
 
+RUN rm -rf /usr/share/*doc /usr/share/man /usr/share/info
+
 # Set default command
 CMD ["bash","-l"]

@@ -14,3 +14,5 @@ RUN pacman -S --noconfirm python2-feedparser python2-pyopenssl
 
 # Remove downloaded packages
 RUN yes | pacman -Scc
+
+RUN rm -rf /usr/share/*doc /usr/share/man /usr/share/info

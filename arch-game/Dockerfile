@@ -7,3 +7,5 @@ RUN pacman -Sy --noconfirm lib32-libglvnd nvidia lib32-nvidia-utils vulkan-intel
 
 # Remove downloaded packages
 RUN pacman -Scc --noconfirm
+
+RUN rm -rf /usr/share/*doc /usr/share/man /usr/share/info

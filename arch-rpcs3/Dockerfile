@@ -7,3 +7,5 @@ RUN pacman -Sy --noconfirm rpcs3-avx2-git ffmpeg-git
 
 # Remove downloaded packages
 RUN pacman -Scc --noconfirm
+
+RUN rm -rf /usr/share/*doc /usr/share/man /usr/share/info
