@@ -1,4 +1,5 @@
 FROM mydatakeeper/archlinuxarm:armv7h
+ADD qemu-arm-static /usr/bin
 
 MAINTAINER escalade
 
