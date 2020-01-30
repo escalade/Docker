@@ -1,4 +1,4 @@
-FROM escalade1/arch-game:latest
+FROM escalade1/arch-graphical:latest
 
 MAINTAINER escalade
 
