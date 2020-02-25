@@ -3,7 +3,7 @@ FROM escalade1/arch:latest
 MAINTAINER escalade
 
 # Install graphics libraries
-RUN pacman -Sy --noconfirm vulkan-intel-git vulkan-radeon-git mesa-git cantarell-fonts adobe-source-code-pro-fonts sdl2
+RUN pacman -Sy --noconfirm vulkan-intel-git vulkan-radeon-git mesa-git cantarell-fonts adobe-source-code-pro-fonts sdl2 fontconfig
 
 # Configure fonts
 RUN ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
