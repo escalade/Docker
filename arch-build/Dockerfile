@@ -3,7 +3,7 @@ FROM escalade1/arch:latest
 MAINTAINER escalade
 
 # Install packages
-RUN pacman -Sy --noconfirm base-devel wget bc gperf zip xorg-mkfontscale xorg-mkfontdir xorg-bdftopcf libxslt jre8-openjdk-headless perl-xml-parser git unzip python patchutils lzop perl-json svn xa kodi-tools-texturepacker rpcsvc-proto avahi go openssh man man-pages inetutils rsync xorg-xcursorgen patchelf shared-mime-info gtk-doc perl-parse-yapp
+RUN pacman -Sy --noconfirm base-devel wget bc gperf zip xorg-mkfontscale xorg-mkfontdir xorg-bdftopcf libxslt jre8-openjdk-headless perl-xml-parser git unzip python patchutils lzop perl-json svn xa kodi-tools-texturepacker rpcsvc-proto avahi go openssh man man-pages inetutils rsync xorg-xcursorgen patchelf shared-mime-info gtk-doc perl-parse-yapp autoconf2.13 python2-psutil gtk3
 
 # Set some default variables
 RUN echo export DISTRO=RetroELEC >> /etc/bash.bashrc
